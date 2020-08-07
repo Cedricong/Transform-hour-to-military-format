@@ -1,0 +1,18 @@
+function transformMilitaryTime (time){
+  var answer =""
+  if (time.charAt (8) == "A"){
+    if (time.substring(0,2) == "12")
+    answer = "00" + time.substring(2,8)
+  }
+  else {
+    if (time.substring(0,2) == "12"){
+    answer = "00" + time.substring(2,8)
+      answer = parseInt(time.substring(0,2)) +time.substring(2,8)
+      }
+  }
+  return answer;
+}
+console.log(transformMilitaryTime("07:45:05PM"))
+console.log(transformMilitaryTime("07:45:05AM"))
+console.log(transformMilitaryTime("12:45:05PM"))
+console.log(transformMilitaryTime("12:45:05AM"))
